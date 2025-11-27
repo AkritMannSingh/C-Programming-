@@ -1,4 +1,4 @@
-# C + 💻 C Programming
+# 💻 C Programming
 
 A structured collection of C programs that takes you from absolute beginner to advanced programmer. This repository follows a systematic learning path with progressively challenging concepts and implementations.
 
@@ -69,4 +69,4 @@ By completing this repository, you'll master:
 ###### · 🎒 Computer Science Students learning C curriculum
 ###### · 💼 Professionals refreshing C skills
 ###### · 🔄 Career Changers entering tech field
-· 🏆 Competitive Programmers practicing algorithms
+###### · 🏆 Competitive Programmers practicing algorithms
