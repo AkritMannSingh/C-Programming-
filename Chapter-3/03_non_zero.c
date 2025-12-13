@@ -17,7 +17,7 @@ int main(){
 	
 	if(0){
 		printf("Hello! I am Zero so I am not exucuted.\n");
-		//Zero Excute Nhi Hoga.
+		//Zero does not Execute 
 	}
 	return 0;
 }
