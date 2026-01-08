@@ -2,8 +2,8 @@
 int main()
 {
 
-// Using Do - while loop
-// This is the first part of a Question 
+// This is the first part of a Question.
+// Using Do - while loop :-
 
 	int sum = 0;
 	int n = 1;
