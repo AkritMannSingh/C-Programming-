@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main()
-{
+int main(){
 	srand(time(NULL));
 
 	int random_num = (rand() % 100) + 1;
@@ -11,21 +10,17 @@ int main()
 	int guessed_num;
 	//printf("Random Number : %d\n", random_num);
 
-	do
-	{
+	do{
 		printf("Guess any number (1-100): ");
 		scanf("%d", &guessed_num);
 
-		if (guessed_num > random_num)
-		{
+		if (guessed_num > random_num){
 			printf("Please! Enter lower number.\n");
 		}
-		else if (guessed_num < random_num)
-		{
+		else if (guessed_num < random_num){
 			printf("Please! Enter higher number.\n");
 		}
-		else
-		{
+		else{
 			printf("Congratulations!!\n");
 		}
 
