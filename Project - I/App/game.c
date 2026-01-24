@@ -8,7 +8,7 @@ int main()
     printf("        🎮 NUMBER GUESSING GAME 🎮\n");
     printf("=========================================\n\n");
     
-    printf("I'm thinking of a number between 0 and 100.\n");
+    printf("🗣️ I'm thinking of a number between 0 and 100.\n");
     printf("Can you guess what it is?\n\n");
 
     srand(time(NULL));
