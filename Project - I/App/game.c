@@ -1,37 +1,79 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-int main(){
-	printf("🎮 NUMBER GUESSING GAME 🎮\n\n\n");
+int main()
+{
+    printf("=========================================\n");
+    printf("        🎮 NUMBER GUESSING GAME 🎮\n");
+    printf("=========================================\n\n");
+    
+    printf("I'm thinking of a number between 0 and 100.\n");
+    printf("Can you guess what it is?\n\n");
 
-	srand(time(NULL));
+    srand(time(NULL));
+    int random_num = rand() % 101;  
+    int times_guesses = 0;
+    int guessed_num;
 
-	int random_num = (rand() % 100) + 1;
-	int times_guesses = 0;
-	int guessed_num;
-	//printf("Random Number : %d\n", random_num);
+    //printf("(the number is %d)\n\n", random_num);
 
-	do{
-		printf("Guess any number (1-100): ");
-		scanf("%d", &guessed_num);
+    do
+    {
+        printf("Enter your guess (0-100): ");
+        
+        if (scanf("%d", &guessed_num) != 1) {
+            printf("Number should be under 100!\n");
+            
+            while(getchar() != '\n');
+            continue;
+        }
+        
+        times_guesses++;
+        
+        
+        if (guessed_num < 0 || guessed_num > 100) {
+            printf("Please enter a number between 0 and 100!\n\n");
+            continue;
+        }
+        
+        
+        if (guessed_num > random_num) {
+            printf("📈 Try a lower number.\n\n");
+        }
+        else if (guessed_num < random_num) {
+            printf("📉 Try a higher number.\n\n");
+        }
+        else {
+            printf("\n");
+            printf("════════════════════════════════════\n");
+            printf("      🎉 CONGRATULATIONS! 🎉\n");
+            printf("════════════════════════════════════\n");
+            printf("You guessed the number.\n");
+        }
 
-		if (guessed_num > random_num){
-			printf("Please! Enter lower number.\n");
-		}
-		else if (guessed_num < random_num){
-			printf("Please! Enter higher number.\n");
-		}
-		else{
-			printf("Congratulations!!\n\n");
-		}
+    } while (guessed_num != random_num);
 
-		times_guesses++;
+    
+    printf("\n");
+    printf("========================================\n");
+    printf("             GAME STATS\n");
+    printf("========================================\n");
+    printf("Number of guesses: %d\n", times_guesses);
+    
+    if (times_guesses <= 5) {
+        printf("Performance: 🏆 Excellent!\n");
+    }
+    else if (times_guesses <= 10) {
+        printf("Performance: 👍 Good!\n");
+    }
+    else if (times_guesses <= 15) {
+        printf("Performance: 😊 Fair\n");
+    }
+    else {
+        printf("Performance: 🧐 Keep practicing!\n");
+    }
+    printf("========================================\n\n");
 
-	} while (guessed_num != random_num);
-
-	printf("You guessed the number in %d guesses.\n\n", times_guesses);
-
-	return 0;
+    return 0;
 }
