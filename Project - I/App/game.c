@@ -23,7 +23,7 @@ int main()
         printf("Enter your guess (0-100): ");
         
         if (scanf("%d", &guessed_num) != 1) {
-            printf("Please enter a number between 0 and 100!\n");
+            printf(""Invalid input! Please enter a number.\n");
             
             while(getchar() != '\n');
             continue;
