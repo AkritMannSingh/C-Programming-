@@ -23,17 +23,17 @@ int main()
         printf("Enter your guess (0-100): ");
         
         if (scanf("%d", &guessed_num) != 1) {
-            printf("Number should be under 100!\n");
+            printf("Please enter a number between 0 and 100!\n");
             
             while(getchar() != '\n');
             continue;
         }
-        
+       
         times_guesses++;
         
         
         if (guessed_num < 0 || guessed_num > 100) {
-            printf("Please enter a number between 0 and 100!\n\n");
+            printf("Number should be under 100!\n\n");
             continue;
         }
         
