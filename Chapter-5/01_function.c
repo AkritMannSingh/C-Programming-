@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 // Function Prototype
 int sum(int, int);
