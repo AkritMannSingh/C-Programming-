@@ -1,4 +1,4 @@
-#include <stdio.h>
+include <stdio.h>
 
 void good_morning();
 void good_afternoon();
